@@ -11,11 +11,12 @@ def suma_matriz(matriz):
 
 # Ejercicio 2: Encontrar el valor máximo en una matriz
 def maximo_matriz(matriz):
-    """
-    Recibe una lista de listas y devuelve el valor máximo.
-    Incluir el código aquí para encontrar el valor máximo en la matriz.
-    """
-    pass
+    maximo = matriz[0][0]  # inicializacion del maximo, asigna el primer elemento de la matriz ala variable maximo porque nececitamos un valor inicial.
+    for filas in matriz:  #recorre las filas, itera sobre cada fila de la matriz 
+        for elemento in filas:  #recorre los elementos de la fila actual, tomara los valores de cada uno de los elemnetos y  itera en cada uno 
+            if elemento > maximo: # verifica si el elemento actual es mayor, compara el elemento actual con el valor almacenado en maximo
+                maximo = elemento #actualiza el valor del maximo con el elemento actual solo si se cumple la condición del if
+    return maximo 
 
 # Ejercicio 3: Verificar si un número es primo
 def es_primo(n):
@@ -85,8 +86,8 @@ def cifrado_cesar(texto, desplazamiento):
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
     lista = [[4,5,6],[6,7,8]]
-    resultado = suma_matriz(lista)
-    print(f'el resultaod de la suma es: {resultado}')
+    resultado = maximo_matriz(lista)
+    print(f'El maximo es el numero: {resultado}')
 
 
 if __name__ == "__main__":
