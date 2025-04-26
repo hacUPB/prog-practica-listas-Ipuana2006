@@ -46,8 +46,20 @@ def transponer_matriz(matriz):
     Recibe una lista de listas y devuelve la matriz transpuesta.
     Incluir el código aquí para transponer la matriz.
     """
-    pass
+    columnas = len(matriz[0]) #numero de columnas (basado en la primera fila)
+    filas = len(matriz) #numero de filas
+    transpuesta = [] # Inicializar matriz transpuesta vacía
+    for j in range(columnas): #bucle por cada columna
+        nueva_fila = [] # preparar una nueva fila para la transpuesta
+    
+        for i in range(filas): # bucle por cada fila
+            nueva_fila.append(matriz[i][j]) # anadir elemento [i][j] a la nueva fila
+        transpuesta.append(nueva_fila) #añadir la nueva fila a la transpuesta
 
+    return transpuesta
+
+ 
+    
 # Ejercicio 5: Filtrar números pares
 def filtrar_pares(lista):
     """
@@ -99,11 +111,8 @@ def cifrado_cesar(texto, desplazamiento):
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
-    n = 8
-    print(es_primo(n))
-    resultado = n
-    print(f'El maximo es el numero: {resultado}')
 
 
-if __name__ == "__main__":
+
+ if __name__ == "__main__":
     main()
