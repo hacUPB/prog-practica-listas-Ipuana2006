@@ -1,16 +1,24 @@
 # Ejercicio 1: Suma de elementos en una lista de listas
 def suma_matriz(matriz):
- fil = len(matriz)
- col = len(matriz[0])
- acumulador = 0
- for i in range(fil):      # indice de lass filas
-    for j in range(col):  # indice de columnas
-        acumulador += matriz[i][j]
- return acumulador
+    """
+    Recibe una lista de listas y devuelve el valor máximo.
+    Incluir el código aquí para encontrar el valor máximo en la matriz.
+    """
+    fil = len(matriz)
+    col = len(matriz[0])
+    acumulador = 0
+    for i in range(fil):      # indice de lass filas
+        for j in range(col):  # indice de columnas
+            acumulador += matriz[i][j]
+    return acumulador
 
 
 # Ejercicio 2: Encontrar el valor máximo en una matriz
 def maximo_matriz(matriz):
+    """
+    Recibe una lista de listas y devuelve el valor máximo.
+    Incluir el código aquí para encontrar el valor máximo en la matriz.
+    """
     maximo = matriz[0][0]  # inicializacion del maximo, asigna el primer elemento de la matriz ala variable maximo porque nececitamos un valor inicial.
     for filas in matriz:  #recorre las filas, itera sobre cada fila de la matriz 
         for elemento in filas:  #recorre los elementos de la fila actual, tomara los valores de cada uno de los elemnetos y  itera en cada uno 
@@ -24,7 +32,13 @@ def es_primo(n):
     Recibe un número y devuelve True si es primo, False en caso contrario.
     Incluir el código aquí para determinar si un número es primo.
     """
-    pass
+    if n <= 1: # descarta numeros que no pueden ser primos por definicion, numeros primos > 1
+        return False
+    for i in range(2, n): #itera desde 2 hasta n-1
+        if n % i == 0: #verifica si n es divisible por i
+            return False # no es primo 
+    return True  # fin numero es primo
+
 
 # Ejercicio 4: Transponer una matriz
 def transponer_matriz(matriz):
@@ -85,8 +99,9 @@ def cifrado_cesar(texto, desplazamiento):
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
-    lista = [[4,5,6],[6,7,8]]
-    resultado = maximo_matriz(lista)
+    n = 8
+    print(es_primo(n))
+    resultado = n
     print(f'El maximo es el numero: {resultado}')
 
 
