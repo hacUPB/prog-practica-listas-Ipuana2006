@@ -98,8 +98,11 @@ def contar_negativos(lista):
     Recibe una lista de números y devuelve la cantidad de números negativos.
     Incluir el código aquí para contar los números negativos en la lista.
     """
-    pass
-
+    contador = 0
+    for numero in lista:
+        if numero < 0:
+            contador += 1
+    return contador
 # Ejercicio 9: Determinar si una lista está ordenada
 def lista_ordenada(lista):
     """
@@ -119,9 +122,7 @@ def cifrado_cesar(texto, desplazamiento):
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
-    numero = 10
-    tabla = tabla_multiplicar(numero)
-    print(f"Tabla del {numero}: {tabla}")
-
-if __name__ == "__main__":
+   
+   
+   if __name__ == "__main__":
     main()
