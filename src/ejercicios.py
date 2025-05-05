@@ -78,8 +78,9 @@ def contar_palabras(frase):
     Recibe una frase y devuelve el número de palabras.
     Incluir el código aquí para contar las palabras en la frase.
     """
-    
-
+    palabras = frase.split()
+    return len(palabras)
+     
 # Ejercicio 7: Crear una tabla de multiplicar
 def tabla_multiplicar(n):
     """
@@ -115,12 +116,8 @@ def cifrado_cesar(texto, desplazamiento):
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
-    # Ingresar números separados por comas
-    entrada = input("Ingresa números separados por comas: ")
-    numeros = [int(num) for num in entrada.split(",")]
-    
-    print("Lista original:", numeros)
-    print("Números pares:", filtrar_pares(numeros))
+    frase = input("Ingrese una frase: ")
+    print("Número de palabras:", contar_palabras(frase))
 
 if __name__ == "__main__":
     main()
