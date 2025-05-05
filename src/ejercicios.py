@@ -109,7 +109,10 @@ def lista_ordenada(lista):
     Recibe una lista de números y devuelve True si está ordenada de menor a mayor.
     Incluir el código aquí para verificar si la lista está ordenada.
     """
-    pass
+    for i in range(len(lista) - 1):
+        if lista[i] > lista[i+1]:
+            return False
+    return True
 
 # Ejercicio 10: Cifrar un texto con el cifrado César
 def cifrado_cesar(texto, desplazamiento):
@@ -122,7 +125,10 @@ def cifrado_cesar(texto, desplazamiento):
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
+    print(lista_ordenada([1, 2, 3, 4]))      
+    print(lista_ordenada([1, 3, 2, 4]))    
+    print(lista_ordenada([4, 3, 2, 1]))      
+
    
-   
-   if __name__ == "__main__":
+if __name__ == "__main__":
     main()
