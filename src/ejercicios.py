@@ -66,7 +66,11 @@ def filtrar_pares(lista):
     Recibe una lista de números y devuelve una nueva lista con solo los números pares.
     Incluir el código aquí para filtrar los números pares.
     """
-    pass
+    pares = []
+    for num in lista:
+        if num % 2 == 0:
+            pares.append(num)
+    return pares
 
 # Ejercicio 6: Contar la cantidad de palabras en una frase
 def contar_palabras(frase):
@@ -74,7 +78,7 @@ def contar_palabras(frase):
     Recibe una frase y devuelve el número de palabras.
     Incluir el código aquí para contar las palabras en la frase.
     """
-    pass
+    
 
 # Ejercicio 7: Crear una tabla de multiplicar
 def tabla_multiplicar(n):
@@ -111,8 +115,12 @@ def cifrado_cesar(texto, desplazamiento):
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
+    # Ingresar números separados por comas
+    entrada = input("Ingresa números separados por comas: ")
+    numeros = [int(num) for num in entrada.split(",")]
+    
+    print("Lista original:", numeros)
+    print("Números pares:", filtrar_pares(numeros))
 
-
-
- if __name__ == "__main__":
+if __name__ == "__main__":
     main()
