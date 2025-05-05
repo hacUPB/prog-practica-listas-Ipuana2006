@@ -120,15 +120,17 @@ def cifrado_cesar(texto, desplazamiento):
     Recibe un texto y un desplazamiento, y devuelve el texto cifrado usando el cifrado César.
     Incluir el código aquí para cifrar el texto con el cifrado César.
     """
-    pass
-
+    for letra in texto:
+        codigo = ord(letra) + desplazamiento
+        if codigo > 122:
+            codigo = 97 + contador
+            contador += 1
+        cesar = chr(codigo)
+        palabras += cesar
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
-    print(lista_ordenada([1, 2, 3, 4]))      
-    print(lista_ordenada([1, 3, 2, 4]))    
-    print(lista_ordenada([4, 3, 2, 1]))      
-
+    
    
 if __name__ == "__main__":
     main()
