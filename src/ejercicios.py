@@ -120,13 +120,15 @@ def cifrado_cesar(texto, desplazamiento):
     Recibe un texto y un desplazamiento, y devuelve el texto cifrado usando el cifrado César.
     Incluir el código aquí para cifrar el texto con el cifrado César.
     """
+    resultado = ""
     for letra in texto:
-        codigo = ord(letra) + desplazamiento
-        if codigo > 122:
-            codigo = 97 + contador
-            contador += 1
-        cesar = chr(codigo)
-        palabras += cesar
+        if letra.islower():
+            codigo = (ord(letra) - 97 + desplazamiento) % 26 + 97
+            resultado += chr(codigo)
+        else:
+            resultado += letra  # Deja todo lo que no sea minúscula igual
+    return resultado
+
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
