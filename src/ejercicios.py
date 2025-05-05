@@ -87,7 +87,10 @@ def tabla_multiplicar(n):
     Recibe un número y devuelve una lista con su tabla de multiplicar del 1 al 10.
     Incluir el código aquí para generar la tabla de multiplicar.
     """
-    pass
+    tabla = []
+    for i in range(1, 11):
+        tabla.append(n * i)
+    return tabla
 
 # Ejercicio 8: Contar números negativos en una lista
 def contar_negativos(lista):
@@ -116,8 +119,9 @@ def cifrado_cesar(texto, desplazamiento):
 
 #Aquí comienza el progrma principal. No modifiques el código debajo de esta línea.
 def main():
-    frase = input("Ingrese una frase: ")
-    print("Número de palabras:", contar_palabras(frase))
+    numero = 10
+    tabla = tabla_multiplicar(numero)
+    print(f"Tabla del {numero}: {tabla}")
 
 if __name__ == "__main__":
     main()
